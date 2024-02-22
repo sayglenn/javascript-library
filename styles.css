@@ -1,0 +1,150 @@
+body {
+  font-family: 'PremierSans-Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(194, 255, 235);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 100ms ease-in-out;
+  border: 2px solid;
+  border-radius: 20px;
+  background-color: white;
+  z-index: 10;
+  width: 300px;
+  max-width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);;
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 10px;
+  height: 30px;
+  width: 290px;
+}
+
+.submit {
+  background-color: rgb(118, 255, 118);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: 100ms ease-in-out;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  background-color: grey;
+  padding: 20px 60px;
+  justify-content: space-between;
+}
+
+.header-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  align-self: center;
+}
+
+.book-add {
+  padding: 10px;
+  width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: rgb(157, 208, 255);
+  border: 2px solid;
+  box-shadow: 0 6px #999;
+}
+
+.book-add:active, .is-read:active, .delete:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(3px);
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 90px;
+  width: 1400px;
+  border: thick solid;
+  background-color: white;
+  padding: 20px;
+  border-radius: 60px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.author {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #666;
+}
+
+.is-read {
+  width: 200px;
+  height: 50px;
+  justify-self: right;
+  align-self: center;
+  margin-right: 30px;
+  font-size: 24px;
+  border-radius: 50px;
+  box-shadow: 0 6px #999;
+  border: 2px solid;
+}
+
+#read {
+  background-color: rgb(149, 255, 149);
+}
+
+#unread {
+  background-color: rgb(255, 149, 149);
+}
+
+.delete {
+  background-color: rgb(255, 149, 149);
+  width: 200px;
+  height: 50px;
+  justify-self: right;
+  align-self: center;
+  margin-right: 30px;
+  font-size: 24px;
+  border-radius: 50px;
+  box-shadow: 0 6px #999;
+  border: 2px solid;
+}
